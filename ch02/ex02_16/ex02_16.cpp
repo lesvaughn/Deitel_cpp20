@@ -9,14 +9,14 @@
  * of the two numbers.
  *
  * les vaughn
- * Jul 29, 2023
+ * Sep 2, 2023
  */
-#include <fmt/format.h>
+
 #include <iostream>
 
 int main()
 {
-	fmt::print("Enter two numbers:  ");
+	std::cout << "Enter two numbers:  ";
 	int int1{0};
 	int int2{0};
 	std::cin >> int1 >> int2;
@@ -26,8 +26,8 @@ int main()
 	int difference{int1 - int2};
 	int quotient{int1 / int2};
 
-	fmt::print("Sum is {}\n", sum);
-	fmt::print("Product is {}\n", product);
-	fmt::print("Difference is {}\n", difference);
-	fmt::print("Quotient is {}\n", quotient);
-}
+	std::cout << "\nSum is " << sum;
+	std::cout << "\nProduct is " << product;
+	std::cout << "\nDifference is " << difference;
+	std::cout << "\nQuotient is " << quotient<< std::endl;
+} 
