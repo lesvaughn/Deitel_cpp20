@@ -1,0 +1,19 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# ignore following dirs
+.vscode
+examples
+
+# ignore exectuables
+*.exe
+
+# ignore files
+Deitel_cpp20.code-workspace
+C++ Notes.txt
