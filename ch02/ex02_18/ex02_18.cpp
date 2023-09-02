@@ -1,28 +1,39 @@
 /*
  * ex02_18.cpp
  *
- * Deitel - C++ How to Program 10/ed.
+ * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach
  *
- * Exercise 2.18 (Comparing Integers)
- * Write a program that asks the user to enter two integers, obtains the
- * numbers from the user, then prints the larger number followed by the words
- * "is larger." If the numbers are equal, print the message "These numbers are
- * equal . "
+ * Exercise 2.18 (Largest and Smallest Integers)
  *
  * les vaughn
- * Jul 29, 2023
+ * Sep 2, 2023
  */
+
 #include <iostream>
-#include <fmt/format.h>
 
 int main()
 {
-	fmt::print("Enter two integers:  ");
+	std::cout << "Enter five integers:  ";
 	int int1{0};
 	int int2{0};
-	std::cin >> int1 >> int2;
+	int int3{0};
+	int int4{0};
+	int int5{0};
+	std::cin >> int1 >> int2 >> int3 >> int4 >> int5;
 
-	if (int1 > int2)	{ fmt::print("{} is larger.\n", int1); }
-	if (int2 > int1)	{ fmt::print("{} is larger.\n", int2); }
-	if (int1 == int2)	{ fmt::print("These numbers are equal.\n"); }
+	int largest{int1};
+	if (int2 > largest) { largest = int2; }
+	if (int3 > largest) { largest = int3; }
+	if (int4 > largest) { largest = int4; }
+	if (int5 > largest) { largest = int5; }
+
+	int smallest{int1};
+
+	if (int2 < smallest) { smallest = int2; }	
+	if (int3 < smallest) { smallest = int3; }
+	if (int4 < smallest) { smallest = int4; }
+	if (int5 < smallest) { smallest = int5; }
+
+	std::cout << "\nLargest is " << largest;
+	std::cout << "\nSmallest is " << smallest << std::endl;
 }

@@ -1,28 +1,28 @@
 /*
  * ex02_20.cpp
  *
- * Deitel - C++ How to Program 10/ed.
+ * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach
  *
- * Exercise 2.20 (Diameter, Circumference and Area of a Circle)
- * Write a program that reads in the radius of a circle as an integer and
- * prints the circle’s diameter, circumference and area. Use the constant value
- * 3.14159 for π. Do all calculations in output statements.
+ * Exercise 2.20  (Multiples)
  *
  * les vaughn
- * Jul 29, 2023
+ * Sep 2, 2023
  */
+
 #include <iostream>
-#include <fmt/format.h>
 
 int main()
 {
-	float PI{3.14159};
+	std::cout << "Enter two integers:  ";
+	int int1{0};
+	int int2{0};
+	std::cin >> int1 >> int2;
 
-	fmt::print("Enter the radius of a circle:  ");
-	int radius{0};
-	std::cin >> radius;
+	if (int1 % int2 == 0) {
+		std::cout << int1 << " is a multiple of " << int2 << std::endl;
+	}
 
-	fmt::print("Diameter is {}\n", radius * 2);
-	fmt::print("Circumference is {}\n", 2 * PI * radius);
-	fmt::print("Area is {}\n", PI * radius * radius);
+	if (int1 % int2 != 0) {
+		std::cout << int1 << " is not a multiple of " << int2 << std::endl;
+	}
 }
