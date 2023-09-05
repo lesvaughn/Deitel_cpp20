@@ -1,0 +1,41 @@
+/*
+ * ex04_14.cpp
+ *
+ * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach
+ *
+ * Exercise 4.14
+ *
+ * les vaughn
+ * Sep 4, 2023
+ */
+
+    i = 1, j = 2, k = 3, m = 2;
+
+    a)  cout (i == 1) << "\n";
+        True, prints "1" as  i is equal to 1
+
+    b)  cout << (j == 3) << "\n";
+        False, prints "0" as j is not equal to 3
+
+    c)  cout << (i >= 1 && j < 4) << "\n";
+        True, prints "1"" as i is equal to 1 and j is less than 4
+
+    d)  cout << (m <= 99 && k < m) << "\n";
+        False, prints "0" as while m is less than 99 k is not less than m
+
+    e)  cout << (j >= i || k == m) << "\n";
+        True, prints "1" as while j > i, k is not equal to m
+
+    f)  cout << (k + m < j || 3 - j >= k) << "\n";
+        False, prints "0" as neither condition is true.
+        k + m is not less than j.
+        3 - k is not greater than equal to k.
+
+    g)  cout << (!m) << "\n";
+        False, prints "0" as !m is equal to 0.  m is equal to 2.
+
+    h)  cout << (!(j - m)) << "\n";
+        True, prints "1" as j - m is equal to 0 so the condition is true.
+
+    i)  cout << (!(k > m)) << "\n";
+        False, prints "0" as k is not > m
