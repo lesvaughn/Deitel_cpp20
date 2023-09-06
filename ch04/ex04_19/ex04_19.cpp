@@ -4,6 +4,7 @@
  * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach
  *
  * Exercise 4.19  (Diamond-Printing Program)
+ *
  * les vaughn
  * Sep 5, 2023
  */
