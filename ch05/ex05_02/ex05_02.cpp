@@ -13,6 +13,7 @@
 #include <cmath>
 #include <format>
 
+// Function Prototype
 double calculateCharges(double hours);
 
 int main()

@@ -28,7 +28,7 @@ int main()
             std::cout << nbr << " is odd." << std::endl;
         }
 
-        std::cout << "Ener an integer (-1 to quit):  ";
+        std::cout << "Enter an integer (-1 to quit):  ";
         std::cin >> nbr;
     }
 }
