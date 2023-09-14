@@ -1,0 +1,20 @@
+/******************************************************************************
+ * ex05_32.txt                                                                *
+ *                                                                            *
+ * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach             *
+ *                                                                            *
+ * Exercise 5.32  (Find the Error)                                            *
+ *                                                                            *
+ * les vaughn                                                                 *
+ * Sep 13, 2023                                                               *
+ *****************************************************************************/
+
+a)  The function definition does not include the return type. Should state:
+        float cube(float number)
+
+b)  number is initiaized to "0".  Therefore, the function will always
+    return "0".  Eliminate the declaration and initialization of number as
+    number is declared in the function definition.
+
+c)  The function does not count down "n", so it will not end.  The second
+    return statement should state:  return n + sum(n - 1);

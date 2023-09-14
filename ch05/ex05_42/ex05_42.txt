@@ -1,0 +1,12 @@
+/******************************************************************************
+ * ex05_42.txt                                                                *
+ *                                                                            *
+ * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach             *
+ *                                                                            *
+ * Exercise 5.42  (Scoped enum)                                               *
+ *                                                                            *
+ * les vaughn                                                                 *
+ * Sep 14, 2023                                                               *
+ *****************************************************************************/
+
+enum class AccountType{ savings, checking, investment };
