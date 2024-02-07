@@ -14,6 +14,11 @@ examples
 # ignore exectuables
 *.exe
 
+# ignore msvc generated files
+*.ilk
+*.obj
+*.pdb
+
 # ignore files
 Deitel_cpp20.code-workspace
 C++ Notes.txt
