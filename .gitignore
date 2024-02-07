@@ -9,7 +9,7 @@
 
 # ignore following dirs
 .vscode
-examples
+examples/
 
 # ignore exectuables
 *.exe
