@@ -39,7 +39,8 @@ int main()
                         ++nbrIncorrect;
                         int responseType{ response(engine) };
 
-                        switch (responseType) {
+                        switch (responseType) 
+                        {
                         case 1:
                         std::cout << "No.  Please try again\n";
                         break;
@@ -87,7 +88,8 @@ int main()
 
         int responseType{ response(engine) };
 
-        switch (responseType) {
+        switch (responseType) 
+        {
         case 1:
         std::cout << "Very good!\n";
         break;
