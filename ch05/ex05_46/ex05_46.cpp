@@ -63,6 +63,7 @@ int main()
 
                         if (nbrResponses == 10) {
                         break;
+                        
                 } // end while answer 
 
                 std::cout << "How much is " << num1 << " times " << num2 << "?  ";

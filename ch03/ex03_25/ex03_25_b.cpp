@@ -31,7 +31,6 @@ int main()
 
         const_e += 1.0 / divisor;
 
-
         ++term;
     }
 

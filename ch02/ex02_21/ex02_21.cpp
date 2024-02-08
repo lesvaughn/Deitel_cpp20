@@ -13,19 +13,19 @@
 
 int main()
 {
-    std::cout << "Display with eight output statements:";
-    std::cout << "\n* * * * * * * *";
-    std::cout << "\n * * * * * * * *";
-    std::cout << "\n* * * * * * * *";
-    std::cout << "\n * * * * * * * *";
-    std::cout << "\n* * * * * * * *";
-    std::cout << "\n * * * * * * * *";
-    std::cout << "\n* * * * * * * *";
-    std::cout << "\n * * * * * * * *" << std::endl;
+        std::cout << "Display with eight output statements:";
+        std::cout << "\n* * * * * * * *";
+        std::cout << "\n * * * * * * * *";
+        std::cout << "\n* * * * * * * *";
+        std::cout << "\n * * * * * * * *";
+        std::cout << "\n* * * * * * * *";
+        std::cout << "\n * * * * * * * *";
+        std::cout << "\n* * * * * * * *";
+        std::cout << "\n * * * * * * * *" << std::endl;
 
-    std::cout << "\nDisplay using as few statemets as possible:";
-    std::cout << "\n* * * * * * * *\n * * * * * * * *\n* * * * * * * *"
-              << "\n * * * * * * * *\n* * * * * * * *\n * * * * * * * *"
-              << "\n* * * * * * * *\n * * * * * * * *" << std::endl;
+        std::cout << "\nDisplay using as few statemets as possible:";
+        std::cout << "\n* * * * * * * *\n * * * * * * * *\n* * * * * * * *"
+                  << "\n * * * * * * * *\n* * * * * * * *\n * * * * * * * *"
+                  << "\n* * * * * * * *\n * * * * * * * *" << std::endl;
 
 }

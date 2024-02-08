@@ -13,14 +13,14 @@
 
 int main()
 {
-	std::cout << "Enter two integers:  ";
-	int int1{0};
-	int int2{0};
-	std::cin >> int1 >> int2;
+        std::cout << "Enter two integers:  ";
+        int int1{0};
+        int int2{0};
+        std::cin >> int1 >> int2;
 
-	if (int1 > int2) { std::cout << int1 << " is larger."; }
-    if (int2 > int1) { std::cout << int2 << " is larger."; }
-    if (int1 == int2) { std::cout << "These numbers are equal."; }
+        if (int1 > int2)  { std::cout << int1 << " is larger."; }
+        if (int2 > int1)  { std::cout << int2 << " is larger."; }
+        if (int1 == int2) { std::cout << "These numbers are equal."; }
 
-    std::cout << std::endl;
+        std::cout << std::endl;
 }
