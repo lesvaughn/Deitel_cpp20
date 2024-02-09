@@ -16,29 +16,35 @@ void isPerfect(int x);
 
 int main()
 {
-    for (int i{ 2 }; i <= 1000; ++i) {
-        isPerfect(i);
-    }
+        for (int i{ 2 }; i <= 1000; ++i) {
+                isPerfect(i);
+        }
 }
 
 void isPerfect(int x)
 {
-    int sumOfDivisors{ 1 };
+        int factors[100] = { 0 };
+        size_t pos{ 0 };
+        int sumOfDivisors{ 0 };
 
-    for (int i{ 2 }; i <= x / 2; ++i) {
-        if (x % i == 0) {
-            sumOfDivisors += i;
-        }
-    }
-
-    if (sumOfDivisors == x) {
-        for (int i{ 2 }; i <= x / 2; ++ i) {
-            if (x % i == 0) {
-                std::cout << i << " ";
-            }
+        for (int i{ 1 }; i <= x / 2; ++i) {
+                if (x % i == 0) {
+                        sumOfDivisors += i;
+                        factors[pos] = i;
+                        ++pos;
+                }
         }
 
-        std::cout << " = " << x << "\n";
-    }
+        if (sumOfDivisors == x) {
+                for (size_t j{ 0 }; j <= 10; ++j) {
+                        if (factors[j] == 0) {
+                                break;
+                        }
+                        
+                        std::cout << factors[j] << "  ";
+                }
+
+                std::cout << "->  " << x << "\n";
+        }
 
 }

@@ -1,0 +1,176 @@
+-------------------------------------------------------------------------------
+Chapter 5 - Functions and an Intro to Function Templates
+
+5.3 Math Library Functions
+        ceil(x)  floor(x)  exp(x)  pow(x)  hypot(x, y)  ... others
+
+        C++20 Mathematical constants
+                #include <numbers>
+                numbers::pi  numbers::e  numbers::sqrt2 ... others
+
+5.4  Function Definitions and Function Prototpyes
+
+5.8  Random-Number Generation
+        #include <random>
+
+        random_device rd;                               // seed random number generator
+        default_random_engine engine{};
+        uniform_int_distribution randomDie{1, 6};
+
+Scoped enums
+        enum class Status{keepRolling, won, lost};  // keepRolling = 0, won = 1, lost = 2
+        using an enum:
+                Status gameStatus{Status::keepRolling}  // Initialization
+                gameStatus = Status::won;               // assignment
+
+        enum class Month{jan = 1, feb, mar, apr, may, jun, 
+                         jul, aug, sep, oct, nov, dec};
+
+        C++20 using enum Declaration
+                using enum Status;
+                best to place using declarations inside the block that uses them
+
+                can use keepRolling, won, or lost without Status::
+
+5.11  Inline Functions
+        Reusable inline functions are typically place in headers so their Definitions
+                can be inlined in each source file that uses them
+
+5.12  Reference and Reference Parameters
+
+        int& number     // number is a reference to an int
+
+        squareByReference(z);
+
+        void squareByReference(int& numberRef) {        // numberRef is an alias for z
+                numberRef *= numberRef;
+        }
+
+        const References:
+
+                void displayName(const std::string& name) {
+                        std::cout << name << "\n";
+                }
+
+                reading from right to left:  the name parameter is a reference to 
+                        a string that is constant.  displayName cannot modify the
+                        value of the caller
+
+5.13  Default Arguments
+        int boxVolume(int length = 1; int width = 1; int height = 1);
+
+5.14  Function Overloading
+        int square(int x);
+        double square(double y);
+
+5.15  Function Templates
+
+        template <typename T>
+        T maximum(T value1, T value2, T value3) {
+                T maximumValue{value1};
+                ...
+        }
+
+5.16  Recursion
+5.18  Unary Scope Resoultion Operator
+
+        unary scope resolution operator (::) to access a global variable
+                when a local variable of the same name is in scope
+
+5:19  Cipher
+-------------------------------------------------------------------------------
+Chapter 4 - Control Statements, Part 2
+
+4.3  for Iteration Statement
+
+4.5  C++20 Text Formatting
+
+        include <format>
+        std::cout << format("Sum is {}\n", total);
+        std::cout << format("{:>4d}{:>20.2f}\n", year, amount);
+
+4.7  do...while Iteration Statement
+
+4.8  switch Multiple-Selection Statement
+        [[fallthrough]] Attribute (case without a break)
+
+        case must be a constant integral expression, 
+                can also use enum constants and character literals
+
+4.9  Selection Statements with Initializers
+        if (int value{7}; value == 7) {
+        
+        See fig 5.5 for if..else and switch statements with initializers
+
+4.10  break and continue Statements
+
+4.11  Logical Operators
+        if (x == true && y == true)
+        if (x == true || y == true)
+
+        if (grade != sentinelValue) {...}
+
+
+-------------------------------------------------------------------------------
+Chapter 3 - Algorithm Development and Control Statements:  Part 1
+
+3.5  if Single-Selection Statement
+
+        bool Data Type:  true = 1, false = 0
+
+3.6  if...else Double-Selection Statement
+
+3.6.3  Conditional Operator (?:)
+         std::cout << (studentGrade >= 60 ? "Passed" : "Falied");
+
+3.7  while Iteration Statement
+
+3.8  Counter-Controlled Iteration
+
+3.9.4  Mixed-Type Expressions and Implicit Type Promotions
+
+        double average(total / gradeCounter);  
+        if total is a double, gradeCounter is implicitly converted to a double
+
+3.9.5  Formatting Floating-Point Numbers
+        <iomanip>
+        setprecision(x) - where x is the number of digits of precision to the
+                          right of the dedcimal Point
+        fixed           - forces floating-point number to display without
+                          sceintific notation
+
+3.10.7  Preventing Narrowing Conversion with Braced Initialization
+
+        int studentCounter{1}; 
+                if a floating-point number is assigned a compile error will
+                occur.
+        
+        int average{total / 10};
+                this works because total and 10 are integers
+
+3.11  Compount Assignment Operators
+        +=  -=  *=  /=  %=
+
+3.12  Increment and Decrement Operators
+        ++x  x++  --x  x--
+
+
+-------------------------------------------------------------------------------
+Chapter 2 - Intro to C++ 20 Programming
+
+2.8 Standard-Library Class String
+
+        #include <string>       
+
+        string s1{"happy};      // initialize a string
+        string s3;              // creates an empty string
+
+        s1.length()             // return length of s1
+        s3.empty()              // boolean denoting string is empty
+
+        s1.starts_with("ha");
+        s1.ends_with("ay");
+        s3 = s1 + s2;           // concatenate s1 and s2
+
+        boolalpha               // stream manipulator to dislpay "true" or "false" 
+                                // instead of 0 or 1

@@ -21,15 +21,15 @@ int main()
 {
     // print headers
     std::cout << std::format("{0}{1:>12}{2:>14}{3:>10}\n", "Celsius",
-        "Fahrenheit", "Fahrenheit", "Celsisu");
+        "Fahrenheit", "Fahrenheit", "Celsius");
 
     for (int i{ 0 }; i <= 100; ++i) {
-        std::cout << std::format("{:>7}{:>12.1f}{:>10}{:>10.1f}\n",
+        std::cout << std::format("{:>7}{:>12.1f}{:>14}{:>10.1f}\n",
             i, fahrenheit(i), i + 32, celsius(i + 32));
     }
 
     for (int i{ 133 }; i <= 212; ++i) {
-        std::cout << std::format("{:>29}{:>10.1f}\n", i, celsius(i));
+        std::cout << std::format("{:>33}{:>10.1f}\n", i, celsius(i));
     }
 }
 

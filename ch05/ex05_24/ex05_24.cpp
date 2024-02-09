@@ -16,7 +16,7 @@ int power(int base, int exponent);
 
 int main()
 {
-    std::cout << "Enter a base number and it's  exponent:  ";
+    std::cout << "Enter a base number and its exponent:  ";
     int base{ 0 };
     int exponent{ 0 };
     std::cin >> base >> exponent;

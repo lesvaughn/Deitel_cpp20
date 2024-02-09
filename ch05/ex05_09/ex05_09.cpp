@@ -18,38 +18,12 @@ double hypotenuse(double s1, double s2);
 
 int main()
 {
-    double t1_s1{ 0 };
-    double t1_s2{ 0 };
-    double t2_s1{ 0 };
-    double t2_s2{ 0 };
-    double t3_s1{ 0 };
-    double t3_s2{ 0 };
-
-    for (int i{ 1 }; i <=3; ++i) {
-        switch(i) {
-            case 1:
-                std::cout << "Enter the length of the two sides of the first "
-                          << "triangle:  ";
-                std::cin >> t1_s1 >> t1_s2;
-                break;
-
-            case 2:
-                std::cout << "Enter the length of the two sides of the second "
-                          << "triangle:  ";
-                std::cin >> t2_s1 >> t2_s2;
-                break;
-
-            case 3:
-                std::cout << "Enter the length of the two sides of the third "
-                          << "triangle:  ";
-                std::cin >> t3_s1 >> t3_s2;
-                break;
-
-            default:
-                std::cout << "Invalid triangle number!\n";
-        }
-
-    }
+    double t1_s1{ 3.0 };
+    double t1_s2{ 4.0 };
+    double t2_s1{ 5.0 };
+    double t2_s2{ 12.0 };
+    double t3_s1{ 8.0 };
+    double t3_s2{ 15.0 };
 
     // print headers
     std::cout << std::format("{0}{1:>8}{2:>8}{3:>12}\n", "Triangle",

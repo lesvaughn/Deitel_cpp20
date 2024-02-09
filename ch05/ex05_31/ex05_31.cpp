@@ -1,18 +1,17 @@
 /******************************************************************************
- * ex05_32.cpp                                                                *
+ * ex05_31.cpp                                                                *
  *                                                                            *
  * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach             *
  *                                                                            *
- * Exercise 5.32                                   *
+ * Exercise 5.31                                                              *
  *                                                                            *
  * les vaughn                                                                 *
- * Sep 13, 2023                                                               *
+ * Feb 9, 2024                                                                *
  *****************************************************************************/
 
 #include <iostream>
-#include <cmath>
 
-// Function Prototype
+// function prototype
 int mystery(int, int);
 
 int main()
@@ -22,26 +21,15 @@ int main()
         int y{ 0 };
         std::cin >> x >> y;
 
-        std::cout << mystery(x, y) << std::endl;
+        std::cout << "The result is " << mystery(x, y) << std::endl;
 }
 
 int mystery(int a, int b)
 {
-        if (b == 0) {
-                return 0;
-        }
-
-        if ( b > 0) {
-                if (1 == b) {
-                        return a;
-                }
-                else {
-                        return a + mystery(a, b - 1);
-                }
+        if (1 == b) {
+                return a;
         }
         else {
-               //return a + mystery(a, b + 1);
-               return b + mystery(b, a - 1);
+                return a + mystery(a, b - 1);
         }
-
 }

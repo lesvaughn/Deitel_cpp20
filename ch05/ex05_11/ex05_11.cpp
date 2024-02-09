@@ -3,7 +3,7 @@
  *
  * Deitel - C++ How to Program 11/ed.  An Ojects-Natural Approach
  *
- * Exercise 5.11  (Multiples)
+ * Exercise 5.11  (Even Numbers)
  *
  * les vaughn
  * Sep 7, 2023
