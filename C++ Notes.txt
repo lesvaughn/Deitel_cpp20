@@ -1,4 +1,61 @@
 -------------------------------------------------------------------------------
+Chapter 6 - arrays, vectors, Ranges and Functional-Style Programming
+
+6.2  arrays
+        array functions
+                arrayName.size()    // size of array
+                arrayName.at(pos)   // run time bounds checker
+
+ 6.3    Declaring arrays
+                std::array<type, arraySize> arrayName;  
+                std::array<int, 5> c;
+        
+6.5     Initializing an array with an Initializer List
+                std::array <int, 5> values{32, 27, 64, 18, 93};
+                std::array <int, 5> values{};  // elements set to 0
+
+                // CTAD (class template argument deduction)
+                std::array values2{1.1, 2.2, 3.3, 4.4};
+
+6.6     Range-Based for Statement
+
+                // useing const if array item will not change can 
+                // improve performance as it prevents the loop from
+                // copying each value into the range variable
+                for (const int& item :items) {
+                        std::cout << std::format("{}", item);
+                }
+
+                for (int& iten : item) {
+                        item *= 2;
+                }
+
+                // range based for with Initialization
+                for (int runningTotal{0}; const int& item : items) {
+                        runningTotal += item;
+                }
+
+6.7     Calculating array Element Values and an Intro to constexpr
+                constexpr to declare constant is initialized at compile time
+
+                constexpr size_t arraySize{5};
+
+6.12    Sorting and Searching arrays
+
+6.15    Class Template vector
+                #include <vector>
+
+                creating vectors
+                        std::vector<int> integers1(7);  // () nuber of elements
+                        std::vector<int> nbrs{1.1, 2.2, 3.3, 4.4}  // {} actual values
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
 Chapter 5 - Functions and an Intro to Function Templates
 
 5.3 Math Library Functions
