@@ -7,9 +7,9 @@ Chapter 6 - arrays, vectors, Ranges and Functional-Style Programming
                 arrayName.at(pos)   // run time bounds checker
 
  6.3    Declaring arrays
-                std::array<type, arraySize> arrayName;  
+                std::array<type, arraySize> arrayName;
                 std::array<int, 5> c;
-        
+
 6.5     Initializing an array with an Initializer List
                 std::array <int, 5> values{32, 27, 64, 18, 93};
                 std::array <int, 5> values{};  // elements set to 0
@@ -19,7 +19,7 @@ Chapter 6 - arrays, vectors, Ranges and Functional-Style Programming
 
 6.6     Range-Based for Statement
 
-                // useing const if array item will not change can 
+                // useing const if array item will not change can
                 // improve performance as it prevents the loop from
                 // copying each value into the range variable
                 for (const int& item :items) {
@@ -41,6 +41,61 @@ Chapter 6 - arrays, vectors, Ranges and Functional-Style Programming
                 constexpr size_t arraySize{5};
 
 6.12    Sorting and Searching arrays
+                <algorithm>  // contains sort and binary_search
+
+                // to initialize an array to string literals put 's'
+                // after the string i. e.
+                std::array colors{"red"s, "orange"s, ...};
+
+
+                // sort array
+                std::sort(std::begin(array_name), std::end(array_name));
+
+                // binary_search -- sequence of values must be in ascending order
+                bool found{std::binary_search(
+                        std::begin(array_name), std::end(array_name), "indigo")};
+
+6.13    Multidemensional arrays
+                // can access using .at()
+                a.at(i).at(j)   - same as a[i][j] but with run time bounds check
+
+                // example array declaration
+                constexpr size_t rows{2};
+                constexpr size_t columns{3};
+                constexpr std::array values1{std::array{1, 2, 3}, std::array{4, 5, 6}};
+
+                auto    // determine a variable's data type based on the varialble's 
+                        // initializer value
+
+                // pass an array of arrays to a function
+                void printArray(const std::array<std::array<int columns>, rows>& ) {
+                        for (const auto& row : a) {
+                                for (const auto& element : row) {
+                                        std::cout << element << " ";
+                                }
+                        }
+
+                        std::cout << "\n";
+                }
+
+6.14    Functinal-Style Programming
+
+               1)  Accumulate - Functional-Style Reduction
+                        #include <numeric>
+
+                        // to add
+                        std::accumulate(std::begin(array_name), std::end(array_Name), 0);
+
+                        // to mulitply
+                        std::accumulate(std::begin(array_name), std::end(array_Name), 1, multiply);
+
+                        // multiply using a Lambda
+                        std::accumulate(std::begin(array_name), std::end(array_name), 1, 
+                                [](const auto& x, const auto& y) {return x * Y});
+
+                2) Lambda Expressions
+
+
 
 6.15    Class Template vector
                 #include <vector>
@@ -80,7 +135,7 @@ Scoped enums
                 Status gameStatus{Status::keepRolling}  // Initialization
                 gameStatus = Status::won;               // assignment
 
-        enum class Month{jan = 1, feb, mar, apr, may, jun, 
+        enum class Month{jan = 1, feb, mar, apr, may, jun,
                          jul, aug, sep, oct, nov, dec};
 
         C++20 using enum Declaration
@@ -109,7 +164,7 @@ Scoped enums
                         std::cout << name << "\n";
                 }
 
-                reading from right to left:  the name parameter is a reference to 
+                reading from right to left:  the name parameter is a reference to
                         a string that is constant.  displayName cannot modify the
                         value of the caller
 
@@ -151,12 +206,12 @@ Chapter 4 - Control Statements, Part 2
 4.8  switch Multiple-Selection Statement
         [[fallthrough]] Attribute (case without a break)
 
-        case must be a constant integral expression, 
+        case must be a constant integral expression,
                 can also use enum constants and character literals
 
 4.9  Selection Statements with Initializers
         if (int value{7}; value == 7) {
-        
+
         See fig 5.5 for if..else and switch statements with initializers
 
 4.10  break and continue Statements
@@ -186,7 +241,7 @@ Chapter 3 - Algorithm Development and Control Statements:  Part 1
 
 3.9.4  Mixed-Type Expressions and Implicit Type Promotions
 
-        double average(total / gradeCounter);  
+        double average(total / gradeCounter);
         if total is a double, gradeCounter is implicitly converted to a double
 
 3.9.5  Formatting Floating-Point Numbers
@@ -198,10 +253,10 @@ Chapter 3 - Algorithm Development and Control Statements:  Part 1
 
 3.10.7  Preventing Narrowing Conversion with Braced Initialization
 
-        int studentCounter{1}; 
+        int studentCounter{1};
                 if a floating-point number is assigned a compile error will
                 occur.
-        
+
         int average{total / 10};
                 this works because total and 10 are integers
 
@@ -217,7 +272,7 @@ Chapter 2 - Intro to C++ 20 Programming
 
 2.8 Standard-Library Class String
 
-        #include <string>       
+        #include <string>
 
         string s1{"happy};      // initialize a string
         string s3;              // creates an empty string
@@ -229,5 +284,5 @@ Chapter 2 - Intro to C++ 20 Programming
         s1.ends_with("ay");
         s3 = s1 + s2;           // concatenate s1 and s2
 
-        boolalpha               // stream manipulator to dislpay "true" or "false" 
+        boolalpha               // stream manipulator to dislpay "true" or "false"
                                 // instead of 0 or 1
