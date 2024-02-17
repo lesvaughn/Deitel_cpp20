@@ -13,6 +13,7 @@
 #include <array>
 #include <string>
 #include <random>
+#include <ranges>
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
 	for (int i{1}; i <= 20; ++i) {
 		size_t term = randomTerm(engine);
 		std::string nounTerm = article.at(term);
+                
 		for (size_t pos = 0; pos < article.at(term).size(); ++pos) {
 			if (pos == 0) {
 				std::cout << static_cast<char>(std::toupper(nounTerm.at(pos)));
@@ -39,9 +41,6 @@ int main()
 			}
 		}
 
-		//std::cout << "article.at(randomTerm(engine).at(pos))";
-
-		//std::cout << "" << article.at(randomTerm(engine)) << " ";
 		std::cout << " " << noun.at(randomTerm(engine)) << " ";
 		std::cout << verb.at(randomTerm(engine)) << " ";
 		std::cout << preposition.at(randomTerm(engine)) << " ";
